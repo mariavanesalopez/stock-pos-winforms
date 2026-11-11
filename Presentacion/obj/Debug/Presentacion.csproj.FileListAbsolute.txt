@@ -42,3 +42,8 @@ C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\System.Run
 C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.Form1.resources
+C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.FormCliente.resources
+C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\Datos.dll
+C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\Datos.pdb
+C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\Datos.dll.config
