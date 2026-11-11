@@ -16,5 +16,16 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFormCliente_Click(object sender, EventArgs e)
+        {
+            FormCliente formCliente = new FormCliente();
+            formCliente.Show();
+        }
     }
 }
