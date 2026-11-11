@@ -36,4 +36,4 @@ C:\Users\Carri\source\repos\stock-pos-winforms\Datos\bin\Debug\System.Numerics.V
 C:\Users\Carri\source\repos\stock-pos-winforms\Datos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Datos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
-C:\Users\Carri\source\repos\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\Carri\source\repos\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.Up2Date
