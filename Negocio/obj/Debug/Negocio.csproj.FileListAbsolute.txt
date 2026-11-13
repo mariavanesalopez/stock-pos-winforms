@@ -39,4 +39,4 @@ C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\bin\Debug\System.Numerics
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.Up2Date
