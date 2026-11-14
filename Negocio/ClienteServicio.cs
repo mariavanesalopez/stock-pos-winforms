@@ -34,5 +34,25 @@ namespace Negocio
             
             return clienteRepositorio.CrearCliente(nuevoCliente);
         }
+
+        public bool ActualizarCliente(int id, string nombre, string dni, string telefono, string direccion)
+        {
+            if (!clienteRepositorio.ExisteId(id))
+            {
+                throw new InvalidOperationException("No existe un cliente con el ID proporcionado.");
+            }
+
+            Cliente clienteActualizado = new Cliente(nombre, dni, telefono, direccion);
+            return clienteRepositorio.ActualizarCliente(clienteActualizado);
+        }
+
+        public bool EliminarCliente(int id)
+        {
+            if (!clienteRepositorio.ExisteId(id))
+            {
+                throw new InvalidOperationException("No existe un cliente con el ID proporcionado.");
+            }
+            return clienteRepositorio.EliminarCliente(id);
+        }
     }
 }

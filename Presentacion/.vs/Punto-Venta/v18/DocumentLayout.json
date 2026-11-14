@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0A0DF6-C85F-4384-AFD9-0A5283594601}|..\\Entidad\\Entidad.csproj|c:\\users\\carri\\source\\repos\\stock-pos-winforms\\entidad\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F84D0E4A-972A-4E43-85BC-E72C3FC858E9}|..\\Negocio\\Negocio.csproj|c:\\users\\carri\\source\\repos\\stock-pos-winforms\\negocio\\clienteservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|solutionrelative:formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06216FF6-399A-46CE-9BD4-5E1EE40C48D3}|..\\Datos\\Datos.csproj|c:\\users\\carri\\source\\repos\\stock-pos-winforms\\datos\\clienterepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|solutionrelative:formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06216FF6-399A-46CE-9BD4-5E1EE40C48D3}|..\\Datos\\Datos.csproj|c:\\users\\carri\\source\\repos\\stock-pos-winforms\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Entidad\\Cliente.cs",
+              "RelativeDocumentMoniker": "..\\Entidad\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Entidad\\Cliente.cs",
+              "RelativeToolTip": "..\\Entidad\\Cliente.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T19:42:52.435Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\FormCliente.cs",
+              "RelativeDocumentMoniker": "FormCliente.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\FormCliente.cs",
+              "RelativeToolTip": "FormCliente.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAMwIoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T22:45:33.319Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\FormCliente.cs",
+              "RelativeDocumentMoniker": "FormCliente.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Presentacion\\FormCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T22:45:22.528Z",
+              "EditorCaption": " [Dise\u00F1o]",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteServicio.cs",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Negocio\\ClienteServicio.cs",
+              "RelativeDocumentMoniker": "..\\Negocio\\ClienteServicio.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Negocio\\ClienteServicio.cs",
+              "RelativeToolTip": "..\\Negocio\\ClienteServicio.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T22:44:34.955Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Datos\\ClienteRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Datos\\ClienteRepositorio.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Datos\\ClienteRepositorio.cs",
+              "RelativeToolTip": "..\\Datos\\ClienteRepositorio.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAIAwwI8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T22:43:31.4Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Datos\\Conexion.cs",
+              "RelativeDocumentMoniker": "..\\Datos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Carri\\source\\repos\\stock-pos-winforms\\Datos\\Conexion.cs",
+              "RelativeToolTip": "..\\Datos\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T22:36:32.378Z",
+              "OwnerCaption": "%2"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
