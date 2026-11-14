@@ -8,13 +8,6 @@ namespace Entidad
 {
     public class Cliente
     {
-        /*
-         id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(150) NOT NULL,
-    dni VARCHAR(20) UNIQUE NOT NULL,
-    telefono VARCHAR(30),
-    direccion VARCHAR(255)
-         */
         private int _idCliente;
         private string _nombre;
         private string _dni;
