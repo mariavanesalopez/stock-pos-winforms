@@ -40,3 +40,45 @@ C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\bin\Debug\System.Runtime.
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
 C:\Users\Carri\source\repos\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Negocio.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Datos.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Entidad.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Google.Protobuf.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\MySql.Data.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Buffers.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Memory.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\ZstdSharp.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Datos.pdb
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Entidad.pdb
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Entidad.dll.config
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Google.Protobuf.pdb
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\Google.Protobuf.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\MySql.Data.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Buffers.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Memory.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\obj\Debug\Negocio.dll
+C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Negocio\obj\Debug\Negocio.pdb
