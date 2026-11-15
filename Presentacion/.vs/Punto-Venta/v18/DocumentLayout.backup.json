@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Presentacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06216FF6-399A-46CE-9BD4-5E1EE40C48D3}|..\\Datos\\Datos.csproj|c:\\users\\nasae\\onedrive\\desktop\\stock-pos-winforms\\datos\\articulorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F84D0E4A-972A-4E43-85BC-E72C3FC858E9}|..\\Negocio\\Negocio.csproj|C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\negocio\\articuloservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|c:\\users\\nasae\\onedrive\\desktop\\stock-pos-winforms\\presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CC1588-A25D-4D41-A2F6-36B142FA05B4}|Presentacion.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB0A0DF6-C85F-4384-AFD9-0A5283594601}|..\\Entidad\\Entidad.csproj|C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\entidad\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06216FF6-399A-46CE-9BD4-5E1EE40C48D3}|..\\Datos\\Datos.csproj|C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +22,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Presentacion\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -42,60 +30,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T21:45:31.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArticuloRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
-              "RelativeDocumentMoniker": "..\\Datos\\ArticuloRepositorio.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
-              "RelativeToolTip": "..\\Datos\\ArticuloRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T21:12:59.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArticuloServicio.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Negocio\\ArticuloServicio.cs",
-              "RelativeDocumentMoniker": "..\\Negocio\\ArticuloServicio.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Negocio\\ArticuloServicio.cs",
-              "RelativeToolTip": "..\\Negocio\\ArticuloServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T21:13:04.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs",
-              "RelativeDocumentMoniker": "..\\Entidad\\Articulo.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs*",
-              "RelativeToolTip": "..\\Entidad\\Articulo.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T20:47:41.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\Conexion.cs",
-              "RelativeDocumentMoniker": "..\\Datos\\Conexion.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\Conexion.cs",
-              "RelativeToolTip": "..\\Datos\\Conexion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T21:12:59.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T21:45:31.394Z"
             }
           ]
         }
