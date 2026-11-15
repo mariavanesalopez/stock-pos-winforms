@@ -158,13 +158,11 @@ namespace Presentacion
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(108, 11);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(42, 20);
             this.txtId.TabIndex = 12;
-            this.txtId.Visible = false;
             // 
             // btnLimpiar
             // 

@@ -147,7 +147,7 @@ namespace Entidad
             get { return _direccion; }
             set
             {
-                if (!string.IsNullOrWhiteSpace(value) && value.Trim().Length < 5)
+                if (!string.IsNullOrWhiteSpace(value) && value.Trim().Length < 4)
                 {
                     throw new ArgumentException("La dirección ingresada es demasiado corta.");
                 }

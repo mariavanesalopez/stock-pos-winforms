@@ -101,7 +101,7 @@ namespace Datos
 
         public bool ActualizarProveedores(Proveedores ProveedoresActualizados)
         {
-            string query = "UPDATE proveedores SET RazonSocial= @razon_social, Cuit= @cuit, condicion_iva= @condicionIva,Telefono= @telefono,Email= @email, Direccion=@direccion WHERE id_proveedor = @id";
+            string query = "UPDATE proveedores SET razon_social= @razon_social, Cuit= @cuit, condicion_iva= @condicion_iva,Telefono= @telefono,Email= @email, Direccion=@direccion WHERE id_proveedor = @id";
 
             try
             {

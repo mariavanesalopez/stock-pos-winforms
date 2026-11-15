@@ -44,6 +44,7 @@ namespace Negocio
             }
 
             Proveedores ProveedoresActualizado = new Proveedores(razonSocial, cuit, condicionIva, telefono, email, direccion);
+            ProveedoresActualizado.IdProveedores = id;
 
             return proveedoresRepositorio.ActualizarProveedores(ProveedoresActualizado);
         }
