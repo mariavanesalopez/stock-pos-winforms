@@ -30,6 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.btnFormCliente = new System.Windows.Forms.Button();
+            this.btnFormArticulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormCliente
@@ -42,12 +43,23 @@ namespace Presentacion
             this.btnFormCliente.UseVisualStyleBackColor = true;
             this.btnFormCliente.Click += new System.EventHandler(this.btnFormCliente_Click);
             // 
+            // btnFormArticulo
+            // 
+            this.btnFormArticulo.Location = new System.Drawing.Point(250, 190);
+            this.btnFormArticulo.Name = "btnFormArticulo";
+            this.btnFormArticulo.Size = new System.Drawing.Size(266, 47);
+            this.btnFormArticulo.TabIndex = 1;
+            this.btnFormArticulo.Text = "Formulario Artículos";
+            this.btnFormArticulo.UseVisualStyleBackColor = true;
+            this.btnFormArticulo.Click += new System.EventHandler(this.btnFormArticulo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnFormCliente);
+            this.Controls.Add(this.btnFormArticulo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -58,6 +70,7 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.Button btnFormCliente;
+        private System.Windows.Forms.Button btnFormArticulo;
     }
 }
 

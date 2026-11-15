@@ -27,5 +27,11 @@ namespace Presentacion
             FormCliente formCliente = new FormCliente();
             formCliente.Show();
         }
+
+        private void btnFormArticulo_Click(object sender, EventArgs e)
+        {
+            FormArticulo formArticulo = new FormArticulo();
+            formArticulo.Show();
+        }
     }
 }
