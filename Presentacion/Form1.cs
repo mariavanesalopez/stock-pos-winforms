@@ -28,10 +28,17 @@ namespace Presentacion
             formCliente.Show();
         }
 
+
         private void btnFormArticulo_Click(object sender, EventArgs e)
         {
             FormArticulo formArticulo = new FormArticulo();
             formArticulo.Show();
+        }
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            FormProveedores formProveedores = new FormProveedores();
+            formProveedores.Show();
+
         }
     }
 }

@@ -1,0 +1,160 @@
+﻿using Entidad;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Datos
+{
+    public class ProveedoresRepositorio
+    {
+        Conexion conexion = new Conexion();
+
+        public DataTable ListarProveedores()
+        {
+            DataTable tabla = new DataTable();
+            string query = "SELECT * FROM proveedores";
+
+            using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+            {
+                using (MySqlDataReader lector = comando.ExecuteReader())
+                {
+                    tabla.Load(lector); // Carga directamente el DataReader en el DataTable
+                }
+            }
+            conexion.CierraConexion();
+            return tabla;
+        }
+        public bool ExisteCuit(string cuit) 
+        {
+            int count = 0;
+            string query = "SELECT COUNT(1) FROM proveedores WHERE Cuit = @Cuit";
+
+            // Usamos un bloque "using" para la conexión obtenida, asegurando que se cierre sí o sí al terminar
+            
+                using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+                {
+                    comando.Parameters.AddWithValue("@Cuit", cuit);
+
+                    // ExecuteScalar devuelve un object, lo convertimos a int de forma segura
+                    count = Convert.ToInt32(comando.ExecuteScalar());
+                }
+
+            // Si el count es mayor a 0, devuelve true; de lo contrario, false
+            return count > 0;
+        }
+
+        public bool ExisteId(int id)
+        {
+            int count = 0;
+            string query = "SELECT COUNT(1) FROM proveedores WHERE id_proveedor = @id";
+
+            // Usamos un bloque "using" para la conexión obtenida, asegurando que se cierre sí o sí al terminar
+
+            using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+            {
+                comando.Parameters.AddWithValue("@id", id);
+
+                // ExecuteScalar devuelve un object, lo convertimos a int de forma segura
+                count = Convert.ToInt32(comando.ExecuteScalar());
+            }
+
+            // Si el count es mayor a 0, devuelve true; de lo contrario, false
+            return count > 0;
+        }
+
+        public bool CrearProveedores(Proveedores nuevoProveedores)
+        {
+            string query = "INSERT INTO proveedores (razon_social, cuit, condicion_iva, telefono, email, direccion) VALUES (@razonSocial, @cuit, @condicionIva, @telefono, @email, @direccion)";
+
+            try
+            {
+                using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+                {
+                    // Asignamos los valores del objeto a los parámetros de la consulta
+                    comando.Parameters.AddWithValue("@razonSocial", nuevoProveedores.RazonSocial);
+                    comando.Parameters.AddWithValue("@cuit", nuevoProveedores.Cuit);
+                    comando.Parameters.AddWithValue("@condicionIva", nuevoProveedores.CondicionIva);
+                    comando.Parameters.AddWithValue("@telefono", nuevoProveedores.Telefono);
+                    comando.Parameters.AddWithValue("@email", nuevoProveedores.Email);
+                    comando.Parameters.AddWithValue("@direccion", nuevoProveedores.Direccion);
+
+                    // Ejecutamos la consulta de inserción (devuelve cantidad de filas afectadas)
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    return filasAfectadas > 0; // Retorna true si se guardó correctamente
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al insertar Proveedores: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                conexion.CierraConexion();
+            }
+        }
+
+        public bool ActualizarProveedores(Proveedores ProveedoresActualizados)
+        {
+            string query = "UPDATE proveedores SET razon_social= @razon_social, Cuit= @cuit, condicion_iva= @condicion_iva,Telefono= @telefono,Email= @email, Direccion=@direccion WHERE id_proveedor = @id";
+
+            try
+            {
+                using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+                {
+                    // Asignamos los valores del objeto a los parámetros de la consulta
+                    comando.Parameters.AddWithValue("@id", ProveedoresActualizados.IdProveedores);
+                    comando.Parameters.AddWithValue("@razon_social", ProveedoresActualizados.RazonSocial);
+                    comando.Parameters.AddWithValue("@cuit", ProveedoresActualizados.Cuit);
+                    comando.Parameters.AddWithValue("@condicion_iva", ProveedoresActualizados.CondicionIva);
+                    comando.Parameters.AddWithValue("@telefono", ProveedoresActualizados.Telefono);
+                    comando.Parameters.AddWithValue("@email", ProveedoresActualizados.Email);
+                    comando.Parameters.AddWithValue("@direccion", ProveedoresActualizados.Direccion);
+                    // Ejecutamos la consulta de modificacion (devuelve cantidad de filas afectadas)
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    return filasAfectadas > 0; // Retorna true si se guardó correctamente
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar Proveedores: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                conexion.CierraConexion();
+            }
+        }
+
+        public bool EliminarProveedores(int id)
+        {
+            string query = "DELETE FROM proveedores WHERE id_proveedor = @id";
+            try
+            {
+                using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+                {
+                    // Asignamos el valor del ID a los parámetros de la consulta
+                    comando.Parameters.AddWithValue("@id", id);
+                    // Ejecutamos la consulta de eliminación (devuelve cantidad de filas afectadas)
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    return filasAfectadas > 0; // Retorna true si se eliminó correctamente
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar Proveedores: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                conexion.CierraConexion();
+            }
+        }
+    }
+}
