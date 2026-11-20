@@ -16,8 +16,13 @@ namespace Datos
         public Conexion()
         {
             // Asignamos la cadena e inicializamos la conexión en el constructor
+<<<<<<< Updated upstream
             CadenaConexion = "server=localhost;port=3310;database=punto_venta;user=root;password=;";
             Conectar = new MySqlConnection(CadenaConexion);
+=======
+           CadenaConexion = "server=localhost;port=3310;database=punto_venta;user=root;password=;";
+           Conectar = new MySqlConnection(CadenaConexion);
+>>>>>>> Stashed changes
         }
 
         // Método para abrir la conexión
