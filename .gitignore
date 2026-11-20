@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Archivos locales generados por Visual Studio
 .vs/
 **/.vs/
@@ -6,3 +7,20 @@
 **/bin/
 **/obj/
 /.gitignore
+=======
+# Visual Studio
+.vs/
+
+# Build output
+**/bin/
+**/obj/
+
+# User files
+*.user
+*.suo
+*.cache
+*.pdb
+
+# VS Code
+.vscode/
+>>>>>>> rama-vane

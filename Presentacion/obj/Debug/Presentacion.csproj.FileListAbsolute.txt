@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\Carri\source\repos\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe
@@ -98,6 +99,8 @@ C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Prese
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.pdb
 =======
+=======
+>>>>>>> 17b2a735d167015798caaa0cb623598c1766aee7
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.pdb
@@ -149,6 +152,7 @@ C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\obj
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Maria Vanesa\Desktop\nuevo_proyecto\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.pdb
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\bin\Debug\Presentacion.exe
@@ -201,3 +205,5 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\obj\Debug\Presen
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Presentacion\obj\Debug\Presentacion.pdb
+=======
+>>>>>>> 17b2a735d167015798caaa0cb623598c1766aee7
