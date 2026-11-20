@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Presentacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB0A0DF6-C85F-4384-AFD9-0A5283594601}|..\\Entidad\\Entidad.csproj|C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\entidad\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB0A0DF6-C85F-4384-AFD9-0A5283594601}|..\\Entidad\\Entidad.csproj|c:\\users\\nasae\\onedrive\\desktop\\stock-pos-winforms\\entidad\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06216FF6-399A-46CE-9BD4-5E1EE40C48D3}|..\\Datos\\Datos.csproj|c:\\users\\nasae\\onedrive\\desktop\\stock-pos-winforms\\datos\\articulorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -26,11 +26,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticuloRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
+              "RelativeDocumentMoniker": "..\\Datos\\ArticuloRepositorio.cs",
+              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
+              "RelativeToolTip": "..\\Datos\\ArticuloRepositorio.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T14:13:25.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs",
+              "RelativeDocumentMoniker": "..\\Entidad\\Articulo.cs",
+              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs",
+              "RelativeToolTip": "..\\Entidad\\Articulo.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T14:13:25.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -43,32 +68,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-14T21:45:31.394Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArticuloRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
-              "RelativeDocumentMoniker": "..\\Datos\\ArticuloRepositorio.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Datos\\ArticuloRepositorio.cs",
-              "RelativeToolTip": "..\\Datos\\ArticuloRepositorio.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T14:13:25.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs",
-              "RelativeDocumentMoniker": "..\\Entidad\\Articulo.cs",
-              "ToolTip": "C:\\Users\\nasae\\OneDrive\\Desktop\\stock-pos-winforms\\Entidad\\Articulo.cs",
-              "RelativeToolTip": "..\\Entidad\\Articulo.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T14:13:25.1Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

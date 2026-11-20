@@ -18,7 +18,7 @@ namespace Entidad
         {
             Codigo = codigo;
             Nombre = nombre;
-            Categoria = categoria;
+            Categoria = categoria;  
             PrecioCompra = precioCompra;
             PrecioVenta = precioVenta;
             StockActual = stockActual;
