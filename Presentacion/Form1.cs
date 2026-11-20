@@ -40,5 +40,11 @@ namespace Presentacion
             formProveedores.Show();
 
         }
+
+        private void btnFormVenta_Click(object sender, EventArgs e)
+        {
+            FormVenta formVenta = new FormVenta();
+            formVenta.Show();
+        }
     }
 }

@@ -129,11 +129,12 @@ namespace Presentacion
             this.dgvClientes.Size = new System.Drawing.Size(659, 150);
             this.dgvClientes.TabIndex = 9;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(308, 217);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(74, 23);
             this.btnModificar.TabIndex = 10;
@@ -144,7 +145,7 @@ namespace Presentacion
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(419, 217);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(79, 23);
             this.btnEliminar.TabIndex = 11;
@@ -155,7 +156,7 @@ namespace Presentacion
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(235, 18);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(47, 20);
             this.txtId.TabIndex = 12;
@@ -163,7 +164,7 @@ namespace Presentacion
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(540, 217);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(79, 23);
             this.btnLimpiar.TabIndex = 13;

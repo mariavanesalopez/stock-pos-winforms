@@ -1,5 +1,4 @@
-﻿using Entidad;
-using Negocio;
+﻿using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -137,6 +136,11 @@ namespace Presentacion
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

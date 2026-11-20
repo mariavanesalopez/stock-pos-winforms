@@ -16,6 +16,12 @@ namespace Negocio
             return articulos;
         }
 
+        public Articulo ObtenerArticuloPorId(int id)
+        {
+            if (!articuloRepositorio.ExisteId(id)) throw new InvalidOperationException("No existe un artículo con el ID proporcionado.");
+            return articuloRepositorio.ObtenerArticuloPorId(id);
+        }
+
         public DataTable ListarCategorias()
         {
             DataTable categorias = articuloRepositorio.ListarCategorias();
