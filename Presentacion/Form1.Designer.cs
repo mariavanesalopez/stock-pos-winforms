@@ -32,6 +32,7 @@ namespace Presentacion
             this.btnFormCliente = new System.Windows.Forms.Button();
             this.btnFormArticulo = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnFormVenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormCliente
@@ -64,11 +65,22 @@ namespace Presentacion
             this.btnProveedores.UseVisualStyleBackColor = true;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
+            // btnFormVenta
+            // 
+            this.btnFormVenta.Location = new System.Drawing.Point(250, 321);
+            this.btnFormVenta.Name = "btnFormVenta";
+            this.btnFormVenta.Size = new System.Drawing.Size(266, 47);
+            this.btnFormVenta.TabIndex = 2;
+            this.btnFormVenta.Text = "Formulario Ventas";
+            this.btnFormVenta.UseVisualStyleBackColor = true;
+            this.btnFormVenta.Click += new System.EventHandler(this.btnFormVenta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFormVenta);
             this.Controls.Add(this.btnProveedores);
             this.Controls.Add(this.btnFormCliente);
             this.Controls.Add(this.btnFormArticulo);
@@ -84,7 +96,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btnFormCliente;
         private System.Windows.Forms.Button btnFormArticulo;
         private System.Windows.Forms.Button btnProveedores;
-
+        private System.Windows.Forms.Button btnFormVenta;
     }
 }
 
