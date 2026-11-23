@@ -12,7 +12,7 @@ namespace Datos
     {
         private Conexion conexion = new Conexion();
 
-        // CREATE: Inserta en ventas y devuelve el id_venta generado
+        // Inserta en ventas y devuelve el id_venta generado
         public int CrearVenta(Venta venta)
         {
             int idGenerado = 0;

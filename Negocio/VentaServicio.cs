@@ -12,13 +12,8 @@ namespace Negocio
     {
         private VentaRepositorio repositorio = new VentaRepositorio();
 
-        /*public bool RegistrarVenta(DateTime fechaHora, int? idCliente, decimal total, List<DetalleVenta> detalles, string estado = "COMPLETADA")
+        public bool RegistrarVenta(DateTime fechaHora, int? idCliente, decimal total, string estado = "COMPLETADA")
         {
-            if (detalles != null && detalles.Any())
-            {
-                total = detalles.Sum(d => d.CalcularSubtotal());
-            }
-
             if (total < 0)
                 return false;
 
@@ -27,20 +22,14 @@ namespace Negocio
                 fecha_hora = fechaHora == default ? DateTime.Now : fechaHora,
                 id_cliente = idCliente,
                 total = total,
-                estado = string.IsNullOrWhiteSpace(estado) ? "COMPLETADA" : estado,
-                detalles = detalles ?? new List<DetalleVenta>()
+                estado = string.IsNullOrWhiteSpace(estado) ? "COMPLETADA" : estado
             };
 
+            // Es IdCreado hay que asignarlo a cada detalle de venta antes de guardarlos en la base de datos.
             int idCreado = repositorio.CrearVenta(nuevaVenta);
 
-            foreach (var detalle in nuevaVenta.detalles)
-            {
-                detalle.id_venta = idCreado;
-                repositorio.CrearDetalleVenta(detalle);
-            }
-
             return idCreado > 0;
-        }*/
+        }
 
         public int ObtenerUltimoIdVenta()
         {
