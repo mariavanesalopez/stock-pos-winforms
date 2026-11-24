@@ -70,6 +70,18 @@ C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Entid
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Entidad\obj\Debug\Entidad.csproj.CopyComplete
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Entidad\obj\Debug\Entidad.dll
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Entidad\obj\Debug\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Entidad.pdb
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\bin\Debug\Entidad.dll.config
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\bin\Debug\Entidad.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\bin\Debug\Entidad.pdb
@@ -106,6 +118,3 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.csp
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.csproj.Up2Date
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.pdb
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll.config
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.pdb

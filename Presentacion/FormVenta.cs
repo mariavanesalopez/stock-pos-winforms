@@ -24,13 +24,23 @@ namespace Presentacion
             InitializeComponent();
             EstiloFormulario.Aplicar(this, "Ventas", "Registrá una venta y consultá su comprobante");
             Resize += FormVenta_Resize;
+            Shown += FormVenta_Shown;
             FormVenta_Resize(this, EventArgs.Empty);
+        }
+
+        private void FormVenta_Shown(object sender, EventArgs e)
+        {
+            AjustarDiseño(ClientSize.Width, Parent == null ? ClientSize.Height : Parent.ClientSize.Height);
         }
 
         private void FormVenta_Resize(object sender, EventArgs e)
         {
+            AjustarDiseño(ClientSize.Width, ClientSize.Height);
+        }
+
+        private void AjustarDiseño(int ancho, int alto)
+        {
             int margen = 24;
-            int ancho = ClientSize.Width;
             int anchoContenido = Math.Max(200, ancho - margen * 2);
             int yCabecera = 12;
             label1.Location = new Point(margen, yCabecera);
@@ -50,19 +60,29 @@ namespace Presentacion
             btnAgregar.Location = new Point(updCantidad.Right + 16, 130);
 
             label6.Location = new Point(margen, 178);
-            dgvDetalleVenta.SetBounds(margen, 200, anchoContenido, Math.Max(100, ClientSize.Height - 294));
+            // El formulario se muestra embebido y su ClientSize no coincide siempre
+            // con la altura visible del panel principal. Mantener acciones en zona segura.
+            int yAcciones = 410;
+            int altoGrilla = Math.Max(70, Math.Min(alto - 294, yAcciones - 208));
+            dgvDetalleVenta.SetBounds(margen, 200, anchoContenido, altoGrilla);
             dgvDetalleVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnQuitar.Location = new Point(Math.Max(margen, ancho - margen - btnQuitar.Width), dgvDetalleVenta.Bottom + 8);
+            btnQuitar.Location = new Point(Math.Max(margen, ancho - margen - btnQuitar.Width), dgvDetalleVenta.Bottom + 4);
 
-            int yAcciones = ClientSize.Height - 52;
-            int xAcciones = margen;
-            btnNueva.Location = new Point(xAcciones, yAcciones);
-            btnCobrar.Location = new Point(xAcciones += btnNueva.Width + 12, yAcciones);
-            btnCancelar.Location = new Point(xAcciones += btnCobrar.Width + 12, yAcciones);
-            btnTicket.Location = new Point(xAcciones += btnCancelar.Width + 12, yAcciones);
-            label9.Location = new Point(Math.Max(xAcciones + btnTicket.Width + 28, ancho - 170), yAcciones - 18);
-            txtTotal.Location = new Point(label9.Left, yAcciones);
-            txtTotal.Width = Math.Max(100, ancho - margen - txtTotal.Left);
+            int anchoBoton = Math.Max(80, Math.Min(112, (anchoContenido - 180) / 4));
+            int separacionBoton = 10;
+            btnNueva.SetBounds(margen, yAcciones, anchoBoton, 34);
+            btnCobrar.SetBounds(margen + anchoBoton + separacionBoton, yAcciones, anchoBoton, 34);
+            btnCancelar.SetBounds(margen + (anchoBoton + separacionBoton) * 2, yAcciones, anchoBoton, 34);
+            btnTicket.SetBounds(margen + (anchoBoton + separacionBoton) * 3, yAcciones, anchoBoton, 34);
+
+            int xTotal = Math.Max(margen + (anchoBoton + separacionBoton) * 4 + 20, ancho - margen - 180);
+            label9.Location = new Point(xTotal, yAcciones - 20);
+            txtTotal.SetBounds(xTotal, yAcciones, Math.Max(100, ancho - margen - xTotal), 30);
+            btnNueva.BringToFront();
+            btnCobrar.BringToFront();
+            btnCancelar.BringToFront();
+            btnTicket.BringToFront();
+            txtTotal.BringToFront();
         }
 
         private void FormVenta_Load(object sender, EventArgs e)

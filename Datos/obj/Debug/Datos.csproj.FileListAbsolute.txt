@@ -76,6 +76,18 @@ C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Datos
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Datos\obj\Debug\Datos.dll
 C:\Users\Carri\OneDrive\Escritorio\Proyecto Punto Venta\stock-pos-winforms\Datos\obj\Debug\Datos.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Datos.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Datos.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-2\Datos.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Datos.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Datos.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-3\Datos.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Datos.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Datos.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review-final\Datos.pdb
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\bin\Debug\Datos.dll.config
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\bin\Debug\Datos.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\bin\Debug\Datos.pdb
@@ -115,6 +127,3 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.pdb
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll.config
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll
-C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.pdb
