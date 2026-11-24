@@ -115,3 +115,6 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Datos\obj\Debug\Datos.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Datos.pdb

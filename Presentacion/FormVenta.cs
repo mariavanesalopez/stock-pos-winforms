@@ -19,7 +19,51 @@ namespace Presentacion
         private int? ultimaVentaRegistrada;
         private TicketVenta ticketParaImprimir;
 
-        public FormVenta() { InitializeComponent(); }
+        public FormVenta()
+        {
+            InitializeComponent();
+            EstiloFormulario.Aplicar(this, "Ventas", "Registrá una venta y consultá su comprobante");
+            Resize += FormVenta_Resize;
+            FormVenta_Resize(this, EventArgs.Empty);
+        }
+
+        private void FormVenta_Resize(object sender, EventArgs e)
+        {
+            int margen = 24;
+            int ancho = ClientSize.Width;
+            int anchoContenido = Math.Max(200, ancho - margen * 2);
+            int yCabecera = 12;
+            label1.Location = new Point(margen, yCabecera);
+            lblNVenta.Location = new Point(margen + 80, yCabecera);
+            label2.Location = new Point(margen + 250, yCabecera);
+            lblFecha.Location = new Point(margen + 300, yCabecera);
+
+            label3.Location = new Point(margen, 48);
+            cbxCliente.Location = new Point(margen, 68);
+            cbxCliente.Width = Math.Min(440, anchoContenido);
+
+            label4.Location = new Point(margen, 112);
+            cbxArticulo.Location = new Point(margen, 132);
+            cbxArticulo.Width = Math.Max(120, anchoContenido - 260);
+            label5.Location = new Point(cbxArticulo.Right + 16, 112);
+            updCantidad.Location = new Point(cbxArticulo.Right + 16, 132);
+            btnAgregar.Location = new Point(updCantidad.Right + 16, 130);
+
+            label6.Location = new Point(margen, 178);
+            dgvDetalleVenta.SetBounds(margen, 200, anchoContenido, Math.Max(100, ClientSize.Height - 294));
+            dgvDetalleVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnQuitar.Location = new Point(Math.Max(margen, ancho - margen - btnQuitar.Width), dgvDetalleVenta.Bottom + 8);
+
+            int yAcciones = ClientSize.Height - 52;
+            int xAcciones = margen;
+            btnNueva.Location = new Point(xAcciones, yAcciones);
+            btnCobrar.Location = new Point(xAcciones += btnNueva.Width + 12, yAcciones);
+            btnCancelar.Location = new Point(xAcciones += btnCobrar.Width + 12, yAcciones);
+            btnTicket.Location = new Point(xAcciones += btnCancelar.Width + 12, yAcciones);
+            label9.Location = new Point(Math.Max(xAcciones + btnTicket.Width + 28, ancho - 170), yAcciones - 18);
+            txtTotal.Location = new Point(label9.Left, yAcciones);
+            txtTotal.Width = Math.Max(100, ancho - margen - txtTotal.Left);
+        }
 
         private void FormVenta_Load(object sender, EventArgs e)
         {

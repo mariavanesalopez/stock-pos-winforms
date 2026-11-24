@@ -1,12 +1,13 @@
 using System.Drawing;
+using System;
 using System.Windows.Forms;
 
 namespace Presentacion
 {
     internal static class EstiloFormulario
     {
-        private static readonly Color Fondo = Color.FromArgb(245, 247, 250);
-        private static readonly Color Azul = Color.FromArgb(37, 99, 168);
+        private static readonly Color Fondo = Color.White;
+        private static readonly Color Azul = Color.FromArgb(47, 111, 178);
         private static readonly Color Texto = Color.FromArgb(38, 50, 65);
 
         public static void Aplicar(Form formulario, string titulo, string subtitulo)
@@ -15,77 +16,50 @@ namespace Presentacion
             formulario.Text = titulo;
             formulario.BackColor = Fondo;
             formulario.Font = new Font("Segoe UI", 9F);
-            formulario.MinimumSize = new Size(700, 500);
-            formulario.StartPosition = FormStartPosition.CenterScreen;
             formulario.AutoScroll = true;
 
-            Label encabezado = new Label();
-            encabezado.Text = titulo;
-            encabezado.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            encabezado.ForeColor = Texto;
-            encabezado.Location = new Point(30, 16);
-            encabezado.AutoSize = true;
-            encabezado.Name = "lblEncabezado";
+            Label encabezado = new Label { Text = titulo, Font = new Font("Segoe UI", 18F, FontStyle.Bold), ForeColor = Texto, Location = new Point(24, 12), AutoSize = true, Name = "lblEncabezado" };
+            Label descripcion = new Label { Text = subtitulo, Font = new Font("Segoe UI", 9F), ForeColor = Color.FromArgb(105, 116, 130), Location = new Point(26, 48), AutoSize = true, Name = "lblDescripcion" };
             formulario.Controls.Add(encabezado);
-            encabezado.BringToFront();
-
-            Label descripcion = new Label();
-            descripcion.Text = subtitulo;
-            descripcion.Font = new Font("Segoe UI", 9F);
-            descripcion.ForeColor = Color.FromArgb(105, 116, 130);
-            descripcion.Location = new Point(32, 54);
-            descripcion.AutoSize = true;
-            descripcion.Name = "lblDescripcion";
             formulario.Controls.Add(descripcion);
-            descripcion.BringToFront();
-
-            foreach (Control control in formulario.Controls)
-                AplicarControl(control);
-
+            foreach (Control control in formulario.Controls) AplicarControl(control);
             formulario.ResumeLayout(true);
         }
 
         private static void AplicarControl(Control control)
         {
-            Label label = control as Label;
-            if (label != null && label.Name != "lblEncabezado" && label.Name != "lblDescripcion")
+            if (control is Label label && label.Name != "lblEncabezado" && label.Name != "lblDescripcion")
             {
                 label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
                 label.ForeColor = Texto;
             }
-
-            TextBox caja = control as TextBox;
-            if (caja != null)
+            if (control is TextBox caja)
             {
                 caja.Font = new Font("Segoe UI", 10F);
                 caja.BackColor = Color.White;
                 caja.ForeColor = Texto;
                 caja.BorderStyle = BorderStyle.FixedSingle;
             }
-
-            ComboBox combo = control as ComboBox;
-            if (combo != null)
+            if (control is ComboBox combo)
             {
                 combo.Font = new Font("Segoe UI", 10F);
                 combo.BackColor = Color.White;
                 combo.ForeColor = Texto;
-                combo.FlatStyle = FlatStyle.Flat;
+                // Flat puede quitar el borde nativo del ComboBox en algunos temas de Windows.
+                // El estilo estándar conserva un contorno claro y consistente.
+                combo.FlatStyle = FlatStyle.Standard;
             }
-
-            Button boton = control as Button;
-            if (boton != null)
+            if (control is Button boton)
             {
                 boton.FlatStyle = FlatStyle.Flat;
                 boton.FlatAppearance.BorderSize = 0;
-                boton.BackColor = boton.Name == "btnGuardar" ? Azul : Color.FromArgb(226, 232, 240);
-                boton.ForeColor = boton.Name == "btnGuardar" ? Color.White : Texto;
+                boton.BackColor = boton.Name == "btnGuardar" || boton.Name == "btnCobrar" ? Azul : Color.FromArgb(232, 237, 243);
+                boton.ForeColor = boton.Name == "btnGuardar" || boton.Name == "btnCobrar" ? Color.White : Texto;
                 boton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
                 boton.Cursor = Cursors.Hand;
-                boton.Height = 36;
+                boton.Height = Math.Max(boton.Height, 32);
             }
-
-            DataGridView grilla = control as DataGridView;
-            if (grilla != null)
+            if (control is DataGridView grilla)
             {
                 grilla.BackgroundColor = Color.White;
                 grilla.BorderStyle = BorderStyle.None;
@@ -101,7 +75,6 @@ namespace Presentacion
                 grilla.RowHeadersVisible = false;
                 grilla.RowTemplate.Height = 30;
                 grilla.AllowUserToAddRows = false;
-                grilla.ReadOnly = true;
                 grilla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 grilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }

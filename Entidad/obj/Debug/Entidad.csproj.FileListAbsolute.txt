@@ -106,3 +106,6 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.csp
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.csproj.Up2Date
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\Entidad\obj\Debug\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-review\Entidad.pdb
