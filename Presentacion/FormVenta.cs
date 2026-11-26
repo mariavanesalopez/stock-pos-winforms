@@ -62,7 +62,7 @@ namespace Presentacion
             label6.Location = new Point(margen, 178);
             // El formulario se muestra embebido y su ClientSize no coincide siempre
             // con la altura visible del panel principal. Mantener acciones en zona segura.
-            int yAcciones = 410;
+            int yAcciones = Math.Min(410, Math.Max(260, alto - 72));
             int altoGrilla = Math.Max(70, Math.Min(alto - 294, yAcciones - 208));
             dgvDetalleVenta.SetBounds(margen, 200, anchoContenido, altoGrilla);
             dgvDetalleVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -259,80 +259,123 @@ namespace Presentacion
             }
         }
 
+        public void MostrarTicketDesdeHistorial(int idVenta)
+        {
+            MostrarTicket(ventaServicio.ObtenerTicket(idVenta));
+        }
+
         private void MostrarTicket(TicketVenta ticket)
         {
             Form vista = new Form
             {
-                Text = "Ticket de venta " + ticket.IdVenta,
+                Text = "Comprobante de venta | N° " + ticket.IdVenta,
                 StartPosition = FormStartPosition.CenterParent,
-                Size = new Size(520, 620),
-                MinimumSize = new Size(450, 500)
+                Size = new Size(850, 720),
+                MinimumSize = new Size(720, 560),
+                BackColor = Color.FromArgb(244, 247, 251),
+                Font = new Font("Segoe UI", 9f)
+            };
+            Panel tarjeta = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(22),
+                Margin = new Padding(18)
             };
             TextBox contenido = new TextBox
             {
                 Multiline = true,
                 ReadOnly = true,
-                ScrollBars = ScrollBars.Vertical,
-                WordWrap = false,
+                ScrollBars = ScrollBars.None,
+                WordWrap = true,
                 Dock = DockStyle.Fill,
+                BorderStyle = BorderStyle.None,
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(38, 50, 65),
                 Font = new Font("Consolas", 10f),
                 Text = FormatearTicket(ticket)
             };
             Button imprimir = new Button
             {
-                Text = "Imprimir / Guardar como PDF",
+                Text = "Guardar ticket como PDF",
                 Dock = DockStyle.Bottom,
-                Height = 42
+                Height = 48,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(47, 111, 178),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 10f, FontStyle.Bold),
+                Cursor = Cursors.Hand
             };
-            imprimir.Click += delegate { ImprimirTicket(ticket); };
-            vista.Controls.Add(contenido);
+            imprimir.FlatAppearance.BorderSize = 0;
+            imprimir.Click += delegate { GuardarTicketComoPdf(ticket); };
+            tarjeta.Controls.Add(contenido);
+            vista.Controls.Add(tarjeta);
             vista.Controls.Add(imprimir);
             vista.ShowDialog(this);
         }
 
         private static string FormatearTicket(TicketVenta ticket)
         {
-            string linea = new string('-', 48);
+            string linea = new string('-', 78);
             System.Text.StringBuilder texto = new System.Text.StringBuilder();
-            texto.AppendLine("                 COMPROBANTE DE VENTA");
+            texto.AppendLine("                 PUNTO DE VENTA");
+            texto.AppendLine("              COMPROBANTE DE VENTA");
             texto.AppendLine(linea);
-            texto.AppendLine("Venta: " + ticket.IdVenta);
-            texto.AppendLine("Fecha: " + ticket.FechaHora.ToString("dd/MM/yyyy HH:mm:ss"));
-            texto.AppendLine("Cliente: " + ticket.Cliente);
+            texto.AppendLine("N° de venta: " + ticket.IdVenta);
+            texto.AppendLine("Fecha y hora: " + ticket.FechaHora.ToString("dd/MM/yyyy HH:mm:ss"));
+            texto.AppendLine("Cliente: " + (string.IsNullOrWhiteSpace(ticket.Cliente) ? "Consumidor final" : ticket.Cliente));
             texto.AppendLine("Estado: " + ticket.Estado);
             texto.AppendLine(linea);
-            texto.AppendLine("Artículo                 Cant.   Precio    Subtotal");
+            texto.AppendLine(string.Format("{0,-42} {1,7} {2,14} {3,14}", "ARTÍCULO", "CANT.", "PRECIO UNIT.", "SUBTOTAL"));
             texto.AppendLine(linea);
             foreach (LineaTicketVenta detalle in ticket.Detalles)
             {
-                string nombre = detalle.Articulo.Length > 22 ? detalle.Articulo.Substring(0, 22) : detalle.Articulo;
-                texto.AppendLine(string.Format(CultureInfo.CurrentCulture, "{0,-22} {1,4} {2,9:N2} {3,10:N2}", nombre, detalle.Cantidad, detalle.PrecioUnitario, detalle.Subtotal));
+                string nombre = detalle.Articulo ?? string.Empty;
+                System.Collections.Generic.List<string> fragmentos = AjustarTexto(nombre, 42);
+                for (int indice = 0; indice < fragmentos.Count; indice++)
+                {
+                    string fragmento = fragmentos[indice];
+                    texto.AppendLine(string.Format(CultureInfo.CurrentCulture, "{0,-42} {1,7} {2,14} {3,14}", fragmento,
+                        indice == 0 ? detalle.Cantidad.ToString(CultureInfo.CurrentCulture) : string.Empty,
+                        indice == 0 ? detalle.PrecioUnitario.ToString("C2", CultureInfo.CurrentCulture) : string.Empty,
+                        indice == 0 ? detalle.Subtotal.ToString("C2", CultureInfo.CurrentCulture) : string.Empty));
+                }
             }
             texto.AppendLine(linea);
-            texto.AppendLine("TOTAL: " + ticket.Total.ToString("C2", CultureInfo.CurrentCulture));
+            texto.AppendLine("                         TOTAL: " + ticket.Total.ToString("C2", CultureInfo.CurrentCulture));
+            texto.AppendLine("                         " + ticket.Estado);
             texto.AppendLine();
             texto.AppendLine("              Gracias por su compra");
             return texto.ToString();
         }
 
-        private void ImprimirTicket(TicketVenta ticket)
+        private static System.Collections.Generic.List<string> AjustarTexto(string valor, int ancho)
         {
-            ticketParaImprimir = ticket;
-            using (PrintDocument documento = new PrintDocument())
-            using (PrintDialog dialogo = new PrintDialog())
+            System.Collections.Generic.List<string> lineas = new System.Collections.Generic.List<string>();
+            string restante = valor;
+            while (restante.Length > ancho)
             {
-                documento.PrintPage += Documento_PrintPage;
-                dialogo.Document = documento;
-                dialogo.UseEXDialog = true;
-                if (dialogo.ShowDialog(this) == DialogResult.OK) documento.Print();
+                int corte = restante.LastIndexOf(' ', ancho);
+                if (corte <= 0) corte = ancho;
+                lineas.Add(restante.Substring(0, corte));
+                restante = restante.Substring(corte).TrimStart();
             }
+            lineas.Add(restante);
+            return lineas;
         }
 
-        private void Documento_PrintPage(object sender, PrintPageEventArgs e)
+        private void GuardarTicketComoPdf(TicketVenta ticket)
         {
-            using (Font fuente = new Font("Consolas", 10f))
-                e.Graphics.DrawString(FormatearTicket(ticketParaImprimir), fuente, Brushes.Black, e.MarginBounds.Left, e.MarginBounds.Top);
-            e.HasMorePages = false;
+            using (SaveFileDialog dialogo = new SaveFileDialog { Filter = "Documento PDF (*.pdf)|*.pdf", FileName = "Ticket_venta_" + ticket.IdVenta + ".pdf", DefaultExt = "pdf" })
+            {
+                if (dialogo.ShowDialog(this) != DialogResult.OK) return;
+                try
+                {
+                    PdfTicket.Generar(dialogo.FileName, FormatearTicket(ticket));
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(dialogo.FileName) { UseShellExecute = true });
+                }
+                catch (Exception ex) { MessageBox.Show("No se pudo guardar el PDF: " + ex.Message, "Ticket", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
         }
     }
 }

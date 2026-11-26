@@ -23,6 +23,7 @@ namespace Presentacion
             this.btnFormCliente = new System.Windows.Forms.Button();
             this.btnFormArticulo = new System.Windows.Forms.Button();
             this.btnFormVenta = new System.Windows.Forms.Button();
+            this.btnHistorialVentas = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.panelNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelContenido = new System.Windows.Forms.Panel();
@@ -61,19 +62,21 @@ namespace Presentacion
             this.panelNavegacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelNavegacion.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
             this.panelNavegacion.WrapContents = false;
-            this.panelNavegacion.Width = 535;
+            this.panelNavegacion.Width = 690;
             this.panelNavegacion.Height = 58;
             this.panelNavegacion.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.panelNavegacion.Name = "panelNavegacion";
             PrepararBoton(this.btnInicio, "Inicio", this.btnInicio_Click);
             PrepararBoton(this.btnFormCliente, "Clientes", this.btnFormCliente_Click);
             PrepararBoton(this.btnFormArticulo, "Artículos", this.btnFormArticulo_Click);
-            PrepararBoton(this.btnFormVenta, "Ventas", this.btnFormVenta_Click);
+            PrepararBoton(this.btnFormVenta, "Nueva venta", this.btnFormVenta_Click);
+            PrepararBoton(this.btnHistorialVentas, "Ventas", this.btnHistorialVentas_Click);
             PrepararBoton(this.btnProveedores, "Proveedores", this.btnProveedores_Click);
             this.panelNavegacion.Controls.Add(this.btnInicio);
             this.panelNavegacion.Controls.Add(this.btnFormCliente);
             this.panelNavegacion.Controls.Add(this.btnFormArticulo);
             this.panelNavegacion.Controls.Add(this.btnFormVenta);
+            this.panelNavegacion.Controls.Add(this.btnHistorialVentas);
             this.panelNavegacion.Controls.Add(this.btnProveedores);
             // panelContenido
             this.panelContenido.BackColor = System.Drawing.Color.FromArgb(244, 247, 251);
@@ -163,12 +166,14 @@ namespace Presentacion
             boton.Size = new System.Drawing.Size(texto == "Proveedores" ? 112 : texto == "Artículos" ? 94 : 88, 40);
             boton.Name = "btn" + texto;
             boton.Text = texto;
+            boton.AutoSize = false;
+            boton.Width = texto == "Nueva venta" ? 116 : (texto == "Proveedores" ? 112 : 92);
             boton.Click += click;
         }
 
         private System.Windows.Forms.Panel panelSuperior, panelContenido, panelBienvenida, panelSeccion;
         private System.Windows.Forms.FlowLayoutPanel panelNavegacion;
         private System.Windows.Forms.Label lblMarca, lblMarcaSub, lblTituloSeccion, lblSubtituloSeccion, lblIconoBienvenida, lblBienvenidaTitulo, lblBienvenidaTexto;
-        private System.Windows.Forms.Button btnInicio, btnFormCliente, btnFormArticulo, btnFormVenta, btnProveedores;
+        private System.Windows.Forms.Button btnInicio, btnFormCliente, btnFormArticulo, btnFormVenta, btnHistorialVentas, btnProveedores;
     }
 }

@@ -33,6 +33,7 @@ namespace Presentacion
         private void btnFormArticulo_Click(object sender, EventArgs e) { MostrarSeccion(new FormArticulo(), btnFormArticulo, "Artículos", "Consultá y mantené el catálogo de productos"); }
         private void btnProveedores_Click(object sender, EventArgs e) { MostrarSeccion(new FormProveedores(), btnProveedores, "Proveedores", "Mantené los datos de tus proveedores"); }
         private void btnFormVenta_Click(object sender, EventArgs e) { MostrarSeccion(new FormVenta(), btnFormVenta, "Ventas", "Registrá una venta y consultá su comprobante"); }
+        private void btnHistorialVentas_Click(object sender, EventArgs e) { MostrarSeccion(new FormHistorialVentas(), btnHistorialVentas, "Ventas", "Consultá las ventas realizadas y sus tickets"); }
 
         private void MostrarInicio()
         {
