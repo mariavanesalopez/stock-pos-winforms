@@ -116,6 +116,17 @@
     <Compile Include="FormArticulo.Designer.cs">
       <DependentUpon>FormArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistorialVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVenta.Designer.cs">
+      <DependentUpon>FormVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstiloFormulario.cs" />
+    <Compile Include="PdfTicket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -130,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormArticulo.resx">
       <DependentUpon>FormArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVenta.resx">
+      <DependentUpon>FormVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
