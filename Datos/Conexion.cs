@@ -16,24 +16,18 @@ namespace Datos
         public Conexion()
         {
             // Asignamos la cadena e inicializamos la conexión en el constructor
-            CadenaConexion = "server=localhost;port=3310;database=punto_venta;user=root;password=;";
-            Conectar = new MySqlConnection(CadenaConexion);
+
+           CadenaConexion = "server=localhost;port=3310;database=punto_venta;user=root;password=;";
+
+           Conectar = new MySqlConnection(CadenaConexion);
         }
 
         // Método para abrir la conexión
         public MySqlConnection Abrirconexion()
         {
-            try
+            if (Conectar.State == System.Data.ConnectionState.Closed)
             {
-                if (Conectar.State == System.Data.ConnectionState.Closed)
-                {
-                    Conectar.Open();
-                    Console.WriteLine("Conexion abierta!");
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error al abrir conexion a la base " + e);
+                Conectar.Open();
             }
             return Conectar;
         }
@@ -41,17 +35,9 @@ namespace Datos
         // Método para cerrar la conexión
         public MySqlConnection CierraConexion()
         {
-            try
+            if (Conectar.State != System.Data.ConnectionState.Closed)
             {
-                if (Conectar.State == System.Data.ConnectionState.Open)
-                {
-                    Conectar.Close();
-                    Console.WriteLine("Conexion Cerrada");
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error al cerrar la conexión: " + e);
+                Conectar.Close();
             }
             return Conectar;
         }

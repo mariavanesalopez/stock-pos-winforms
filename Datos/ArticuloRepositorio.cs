@@ -12,7 +12,7 @@ namespace Datos
         public DataTable ListarArticulos()
         {
             DataTable tabla = new DataTable();
-            const string query = "SELECT id_articulo, codigo, nombre, categoria, precio_compra, precio_venta, stock_actual, stock_minimo FROM articulos ORDER BY nombre";
+            const string query = "SELECT id_articulo, nombre, categoria, precio_compra, precio_venta, stock_actual, stock_minimo FROM articulos ORDER BY nombre";
             try
             {
                 using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
@@ -119,6 +119,35 @@ namespace Datos
             comando.Parameters.AddWithValue("@venta", articulo.PrecioVenta);
             comando.Parameters.AddWithValue("@stock", articulo.StockActual);
             comando.Parameters.AddWithValue("@minimo", articulo.StockMinimo);
+        }
+
+        public Articulo ObtenerArticuloPorId(int id)
+        {
+            const string query = "SELECT id_articulo, codigo, nombre, categoria, precio_compra, precio_venta, stock_actual, stock_minimo FROM articulos WHERE id_articulo = @id";
+            try
+            {
+                using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
+                {
+                    comando.Parameters.AddWithValue("@id", id);
+                    using (MySqlDataReader lector = comando.ExecuteReader())
+                    {
+                        if (lector.Read())
+                        {
+                            string Codigo = lector.GetString("codigo");
+                            string Nombre = lector.GetString("nombre");
+                            string Categoria = lector.GetString("categoria");
+                            decimal PrecioCompra = lector.GetDecimal("precio_compra");
+                            decimal PrecioVenta = lector.GetDecimal("precio_venta");
+                            int StockActual = lector.GetInt32("stock_actual");
+                            int StockMinimo = lector.GetInt32("stock_minimo");
+                            return new Articulo(Codigo, Nombre, Categoria, PrecioCompra, PrecioVenta, StockActual, StockMinimo);
+                        }
+                    }
+                }
+            }
+            catch (MySqlException ex) { throw new InvalidOperationException("No se pudo obtener el artículo.", ex); }
+            finally { conexion.CierraConexion(); }
+            throw new InvalidOperationException("No se encontró un artículo con el ID proporcionado."); 
         }
     }
 }

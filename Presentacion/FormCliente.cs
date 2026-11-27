@@ -1,5 +1,4 @@
-﻿using Entidad;
-using Negocio;
+﻿using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +17,50 @@ namespace Presentacion
         public FormCliente()
         {
             InitializeComponent();
+            EstiloFormulario.Aplicar(this, "Clientes", "Administrá la información de tus clientes");
+            Resize += FormCliente_Resize;
+            FormCliente_Resize(this, EventArgs.Empty);
+        }
+
+        private void FormCliente_Resize(object sender, EventArgs e)
+        {
+            int ancho = ClientSize.Width;
+            int margen = 24;
+            int espacio = Math.Max(0, ancho - margen * 2);
+            int altoCampo = 30;
+            int yCampos = 20;
+
+            label1.Location = new Point(margen, yCampos + 6);
+            txtNombre.Location = new Point(margen + 65, yCampos);
+            txtNombre.Size = new Size(Math.Max(80, (espacio - 650) / 3), altoCampo);
+
+            int x = txtNombre.Right + 18;
+            label2.Location = new Point(x, yCampos + 6);
+            txtDni.Location = new Point(x + 42, yCampos);
+            txtDni.Size = new Size(Math.Max(80, (espacio - 650) / 3), altoCampo);
+
+            x = txtDni.Right + 18;
+            label3.Location = new Point(x, yCampos + 6);
+            txtTelefono.Location = new Point(x + 62, yCampos);
+            txtTelefono.Size = new Size(Math.Max(90, (espacio - 650) / 3), altoCampo);
+
+            x = txtTelefono.Right + 18;
+            label4.Location = new Point(x, yCampos + 6);
+            txtDireccion.Location = new Point(x + 68, yCampos);
+            txtDireccion.Size = new Size(Math.Max(100, ancho - margen - txtDireccion.Left), altoCampo);
+
+            int yBotones = 68;
+            int anchoBoton = 120;
+            int separacion = 14;
+            int grupo = anchoBoton * 4 + separacion * 3;
+            int inicio = Math.Max(margen, (ancho - grupo) / 2);
+            btnGuardar.SetBounds(inicio, yBotones, anchoBoton, 36);
+            btnModificar.SetBounds(inicio + anchoBoton + separacion, yBotones, anchoBoton, 36);
+            btnEliminar.SetBounds(inicio + (anchoBoton + separacion) * 2, yBotones, anchoBoton, 36);
+            btnLimpiar.SetBounds(inicio + (anchoBoton + separacion) * 3, yBotones, anchoBoton, 36);
+
+            dgvClientes.SetBounds(margen, 122, Math.Max(100, ancho - margen * 2), Math.Max(120, ClientSize.Height - 140));
+            dgvClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         private void FormCliente_Load(object sender, EventArgs e)
@@ -137,6 +180,11 @@ namespace Presentacion
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
