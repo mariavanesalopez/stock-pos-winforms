@@ -84,6 +84,8 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            try
+            {
             string nombre = txtNombre.Text;
             string dni = txtDni.Text;
             string telefono = txtTelefono.Text;
@@ -103,6 +105,8 @@ namespace Presentacion
             {
                 MessageBox.Show("No se pudo guardar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            }
+            catch (Exception ex) { MostrarErrorOperacion(ex); }
         }
 
         private void LimpiarCampos()
@@ -116,6 +120,8 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
             int id = txtId.Text != "" ? Convert.ToInt32(txtId.Text) : 0;
             string nombre = txtNombre.Text;
             string dni = txtDni.Text;
@@ -136,6 +142,8 @@ namespace Presentacion
             {
                 MessageBox.Show("No se pudo actualizar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            }
+            catch (Exception ex) { MostrarErrorOperacion(ex); }
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -157,6 +165,8 @@ namespace Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
             if (MessageBox.Show("¿¡Esta seguro de Eliminar al cliente con ID " + txtId.Text + "!?", "Éxito", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 int id = Convert.ToInt32(txtId.Text);
@@ -175,6 +185,13 @@ namespace Presentacion
                     MessageBox.Show("No se pudo eliminar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            }
+            catch (Exception ex) { MostrarErrorOperacion(ex); }
+        }
+
+        private void MostrarErrorOperacion(Exception ex)
+        {
+            MessageBox.Show(ex.Message, "No se pudo completar la operación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

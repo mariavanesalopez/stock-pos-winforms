@@ -76,7 +76,7 @@ namespace Datos
         public List<Venta> ObtenerTodas()
         {
             List<Venta> ventas = new List<Venta>();
-            const string query = "SELECT id_venta, fecha_hora, id_cliente, total, estado FROM ventas ORDER BY id_venta DESC";
+            const string query = "SELECT v.id_venta, v.fecha_hora, v.id_cliente, c.nombre AS nombre_cliente, v.total, v.estado FROM ventas v LEFT JOIN clientes c ON v.id_cliente = c.id_cliente ORDER BY v.id_venta DESC";
             try
             {
                 using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
@@ -85,7 +85,7 @@ namespace Datos
                     while (lector.Read())
                     {
                         int columnaCliente = lector.GetOrdinal("id_cliente");
-                        ventas.Add(new Venta { id_venta = lector.GetInt32("id_venta"), fecha_hora = lector.GetDateTime("fecha_hora"), id_cliente = lector.IsDBNull(columnaCliente) ? (int?)null : lector.GetInt32(columnaCliente), total = lector.GetDecimal("total"), estado = lector.GetString("estado") });
+                        ventas.Add(new Venta { id_venta = lector.GetInt32("id_venta"), fecha_hora = lector.GetDateTime("fecha_hora"), id_cliente = lector.IsDBNull(columnaCliente) ? (int?)null : lector.GetInt32("id_cliente"), nombre_cliente = lector.IsDBNull(lector.GetOrdinal("nombre_cliente")) ? "Consumidor final" : lector.GetString("nombre_cliente"), total = lector.GetDecimal("total"), estado = lector.GetString("estado") });
                     }
                 }
                 return ventas;

@@ -6,7 +6,6 @@ using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -16,8 +15,6 @@ namespace Presentacion
         private readonly VentaServicio ventaServicio = new VentaServicio();
         private readonly ClienteServicio clienteServicio = new ClienteServicio();
         private readonly ArticuloServicio articuloServicio = new ArticuloServicio();
-        private int? ultimaVentaRegistrada;
-        private TicketVenta ticketParaImprimir;
 
         public FormVenta()
         {
@@ -68,20 +65,16 @@ namespace Presentacion
             dgvDetalleVenta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnQuitar.Location = new Point(Math.Max(margen, ancho - margen - btnQuitar.Width), dgvDetalleVenta.Bottom + 4);
 
-            int anchoBoton = Math.Max(80, Math.Min(112, (anchoContenido - 180) / 4));
-            int separacionBoton = 10;
-            btnNueva.SetBounds(margen, yAcciones, anchoBoton, 34);
-            btnCobrar.SetBounds(margen + anchoBoton + separacionBoton, yAcciones, anchoBoton, 34);
-            btnCancelar.SetBounds(margen + (anchoBoton + separacionBoton) * 2, yAcciones, anchoBoton, 34);
-            btnTicket.SetBounds(margen + (anchoBoton + separacionBoton) * 3, yAcciones, anchoBoton, 34);
+            int anchoBoton = Math.Max(130, Math.Min(160, (anchoContenido - 200) / 2));
+            int separacionBoton = 12;
+            btnNueva.SetBounds(margen, yAcciones, anchoBoton, 36);
+            btnCobrar.SetBounds(margen + anchoBoton + separacionBoton, yAcciones, anchoBoton, 36);
 
-            int xTotal = Math.Max(margen + (anchoBoton + separacionBoton) * 4 + 20, ancho - margen - 180);
+            int xTotal = Math.Max(margen + (anchoBoton + separacionBoton) * 2 + 20, ancho - margen - 180);
             label9.Location = new Point(xTotal, yAcciones - 20);
             txtTotal.SetBounds(xTotal, yAcciones, Math.Max(100, ancho - margen - xTotal), 30);
             btnNueva.BringToFront();
             btnCobrar.BringToFront();
-            btnCancelar.BringToFront();
-            btnTicket.BringToFront();
             txtTotal.BringToFront();
         }
 
@@ -220,9 +213,7 @@ namespace Presentacion
 
                 bool registrado = ventaServicio.RegistrarVenta(DateTime.Now, idCliente, detalles);
                 if (!registrado) throw new InvalidOperationException("No se pudo registrar la venta.");
-                ultimaVentaRegistrada = ventaServicio.ListarVentas().First().id_venta;
                 MessageBox.Show("Venta registrada correctamente.", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnTicket.Enabled = true;
                 LimpiarFormularioNuevaVenta();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "No se pudo cobrar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -241,23 +232,6 @@ namespace Presentacion
         }
 
         private void btnNueva_Click(object sender, EventArgs e) { LimpiarFormularioNuevaVenta(); }
-        private void btnCancelar_Click(object sender, EventArgs e) { Close(); }
-
-        private void btnTicket_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!ultimaVentaRegistrada.HasValue)
-                    throw new InvalidOperationException("Primero debe cobrar una venta para poder mostrar su ticket.");
-
-                TicketVenta ticket = ventaServicio.ObtenerTicket(ultimaVentaRegistrada.Value);
-                MostrarTicket(ticket);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ticket", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
 
         public void MostrarTicketDesdeHistorial(int idVenta)
         {

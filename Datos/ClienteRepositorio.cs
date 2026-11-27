@@ -88,8 +88,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al insertar cliente: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo guardar el cliente. Verifique los datos y la conexión con la base.", ex);
             }
             finally
             {
@@ -119,8 +118,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al actualizar cliente: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo actualizar el cliente. Verifique los datos y la conexión con la base.", ex);
             }
             finally
             {
@@ -144,8 +142,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al eliminar cliente: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo eliminar el cliente. Puede tener ventas relacionadas o existir un problema de conexión.", ex);
             }
             finally
             {
