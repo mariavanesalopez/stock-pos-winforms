@@ -151,3 +151,6 @@ C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-client-name\Entidad.pdb
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-error-flow\Entidad.dll.config
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-error-flow\Entidad.dll
 C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-error-flow\Entidad.pdb
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-articulo-fix\Entidad.dll.config
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-articulo-fix\Entidad.dll
+C:\Users\nasae\OneDrive\Desktop\stock-pos-winforms\build-articulo-fix\Entidad.pdb
