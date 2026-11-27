@@ -21,7 +21,7 @@ namespace Presentacion
             grilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "id_venta", DataPropertyName = "id_venta", HeaderText = "N° Venta", FillWeight = 12 });
             grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "fecha_hora", DataPropertyName = "fecha_hora", HeaderText = "Fecha", FillWeight = 24 });
-            grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "id_cliente", DataPropertyName = "id_cliente", HeaderText = "Cliente", FillWeight = 12 });
+            grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "nombre_cliente", DataPropertyName = "nombre_cliente", HeaderText = "Cliente", FillWeight = 20 });
             grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "total", DataPropertyName = "total", HeaderText = "Total", FillWeight = 16, DefaultCellStyle = { Format = "C2" } });
             grilla.Columns.Add(new DataGridViewTextBoxColumn { Name = "estado", DataPropertyName = "estado", HeaderText = "Estado", FillWeight = 16 });
             grilla.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;

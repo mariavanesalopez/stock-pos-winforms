@@ -11,6 +11,7 @@ namespace Entidad
         public int id_venta { get; set; }
         public DateTime fecha_hora { get; set; }
         public int? id_cliente { get; set; }
+        public string nombre_cliente { get; set; }
         public decimal total { get; set; }
         public string estado { get; set; } = "COMPLETADA";
 

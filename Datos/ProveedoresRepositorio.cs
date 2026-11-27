@@ -90,8 +90,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al insertar Proveedores: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo guardar el proveedor. Verifique los datos y la conexión con la base.", ex);
             }
             finally
             {
@@ -123,8 +122,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al actualizar Proveedores: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo actualizar el proveedor. Verifique los datos y la conexión con la base.", ex);
             }
             finally
             {
@@ -148,8 +146,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al eliminar Proveedores: " + ex.Message);
-                return false;
+                throw new InvalidOperationException("No se pudo eliminar el proveedor. Puede tener registros relacionados o existir un problema de conexión.", ex);
             }
             finally
             {

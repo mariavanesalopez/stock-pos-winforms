@@ -84,7 +84,7 @@ namespace Presentacion
             {
                 dgvArticulos.DataSource = articuloServicio.ListarArticulos();
                 if (dgvArticulos.Columns.Contains("categoria")) dgvArticulos.Columns["categoria"].HeaderText = "Categoría";
-                if (dgvArticulos.Columns.Contains("id_articulo")) dgvArticulos.Columns["id_articulo"].HeaderText = "ID";
+                if (dgvArticulos.Columns.Contains("id_articulo")) dgvArticulos.Columns["id_articulo"].Visible = false;
                 if (dgvArticulos.Columns.Contains("codigo")) dgvArticulos.Columns["codigo"].HeaderText = "Código";
                 if (dgvArticulos.Columns.Contains("nombre")) dgvArticulos.Columns["nombre"].HeaderText = "Nombre";
                 if (dgvArticulos.Columns.Contains("precio_compra")) dgvArticulos.Columns["precio_compra"].HeaderText = "Precio compra";
@@ -141,15 +141,22 @@ namespace Presentacion
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            DataGridViewRow fila = dgvArticulos.Rows[e.RowIndex];
-            txtId.Text = Valor(fila, "id_articulo");
-            txtCodigo.Text = Valor(fila, "codigo");
-            txtNombre.Text = Valor(fila, "nombre");
-            cmbCategoria.Text = Valor(fila, "categoria");
-            txtPrecioCompra.Text = Valor(fila, "precio_compra");
-            txtPrecioVenta.Text = Valor(fila, "precio_venta");
-            txtStockActual.Text = Valor(fila, "stock_actual");
-            txtStockMinimo.Text = Valor(fila, "stock_minimo");
+            try
+            {
+                DataGridViewRow fila = dgvArticulos.Rows[e.RowIndex];
+                txtId.Text = Valor(fila, "id_articulo");
+                txtCodigo.Text = Valor(fila, "codigo");
+                txtNombre.Text = Valor(fila, "nombre");
+                cmbCategoria.Text = Valor(fila, "categoria");
+                txtPrecioCompra.Text = Valor(fila, "precio_compra");
+                txtPrecioVenta.Text = Valor(fila, "precio_venta");
+                txtStockActual.Text = Valor(fila, "stock_actual");
+                txtStockMinimo.Text = Valor(fila, "stock_minimo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron cargar los datos del artículo seleccionado: " + ex.Message, "Artículo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private static string Valor(DataGridViewRow fila, string columna)

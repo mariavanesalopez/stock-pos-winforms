@@ -46,8 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnNueva = new System.Windows.Forms.Button();
             this.btnCobrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnTicket = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
@@ -201,7 +199,7 @@
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(75, 23);
             this.btnNueva.TabIndex = 15;
-            this.btnNueva.Text = "Nueva";
+            this.btnNueva.Text = "Limpiar";
             this.btnNueva.UseVisualStyleBackColor = true;
             this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
             // 
@@ -211,30 +209,10 @@
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(75, 23);
             this.btnCobrar.TabIndex = 16;
-            this.btnCobrar.Text = "Cobrar";
+            this.btnCobrar.Text = "Grabar venta";
             this.btnCobrar.UseVisualStyleBackColor = true;
             this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(336, 395);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 17;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnTicket
-            // 
-            this.btnTicket.Location = new System.Drawing.Point(436, 395);
-            this.btnTicket.Name = "btnTicket";
-            this.btnTicket.Size = new System.Drawing.Size(75, 23);
-            this.btnTicket.TabIndex = 18;
-            this.btnTicket.Text = "Ticket";
-            this.btnTicket.UseVisualStyleBackColor = true;
-            this.btnTicket.Enabled = false;
-            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // txtTotal
             // 
@@ -292,8 +270,6 @@
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.btnTicket);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.label6);
@@ -332,8 +308,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.Button btnCobrar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnTicket;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnQuitar;

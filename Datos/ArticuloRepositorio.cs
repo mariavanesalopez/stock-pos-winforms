@@ -12,7 +12,7 @@ namespace Datos
         public DataTable ListarArticulos()
         {
             DataTable tabla = new DataTable();
-            const string query = "SELECT id_articulo, nombre, categoria, precio_compra, precio_venta, stock_actual, stock_minimo FROM articulos ORDER BY nombre";
+            const string query = "SELECT id_articulo, codigo, nombre, categoria, precio_compra, precio_venta, stock_actual, stock_minimo FROM articulos ORDER BY nombre";
             try
             {
                 using (MySqlCommand comando = new MySqlCommand(query, conexion.Abrirconexion()))
